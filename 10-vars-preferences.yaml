@@ -3,14 +3,14 @@
     vars:
       COURSE: "DEVOPS WITH AWS"
     vars_files:
-      - vars.yaml
+    - vars.yaml
     vars_prompt:   
-      - name: COURSE
+    - name: COURSE
         prompt: please enter course name
         private: false
     tasks:
     - name: top priority task
-        vars:
+      vars:
           COURSE: "ansible"
           ansible.builtin.debug:
             msg: "Hi I'm learning {{COURSE}}"
