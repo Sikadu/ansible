@@ -1,13 +1,13 @@
 - name: vars to print
   hosts: web
-   vars:
-    COURSE: "DEVOPS WITH AWS"
-   vars_files:
-   - vars.yaml
-   vars_prompt:   
-    - name: COURSE
-      prompt: please enter course name
-      private: false
+    vars:
+    #  COURSE: "DEVOPS WITH AWS"
+    vars_files:
+    - vars.yaml
+    vars_prompt:   
+     - name: COURSE
+       prompt: please enter course name
+       private: false
   tasks:
    - name: top priority task
      vars:
