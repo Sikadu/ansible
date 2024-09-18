@@ -34,7 +34,7 @@
   tasks:
   - name: please enter the course info
     vars:
-     COURSE: "ansible"
+    #  COURSE: "ansible"
   ansible.builtin.debug:
     msg: "Hi, i'm learning {{COURSE}}"   
 
