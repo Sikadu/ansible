@@ -6,10 +6,10 @@
       - vars.yaml
     vars_prompt:   
       - name: COURSE
-      prompt: please enter course name
-      private: false
+        prompt: please enter course name
+        private: false
     tasks:
-      - name: top priority task
+    - name: top priority task
         vars:
           COURSE: "ansible"
           ansible.builtin.debug:
