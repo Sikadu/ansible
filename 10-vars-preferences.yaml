@@ -10,7 +10,7 @@
       private: false
   tasks:
    - name: top priority task
-      vars:
+     vars:
        COURSE: "ansible"
     ansible.builtin.debug:
       msg: "Hi I'm learning {{COURSE}}"
