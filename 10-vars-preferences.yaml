@@ -29,12 +29,12 @@
   vars_files:
   - vars.yaml  
   vars_prompt:
-  - name: course
+  - name: COURSE
     prompt: please enter the course name
   tasks:
   - name: please enter the course info
     vars:
-     COURSE: ansible
+     COURSE: "ansible"
   ansible.builtin.debug:
     msg: "Hi, i'm learning {{COURSE}}"   
 
