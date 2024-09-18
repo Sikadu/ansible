@@ -8,10 +8,10 @@
   - name: COURSE
     prompt: please enter course name
     private: false
-    tasks:
-      - name: top priority task
-        vars:
-          COURSE: "ansible"
-          ansible.builtin.debug:
+  tasks:
+    - name: top priority task
+      vars:
+        COURSE: "ansible"
+        ansible.builtin.debug:
           msg: "Hi I'm learning {{COURSE}}"
         
