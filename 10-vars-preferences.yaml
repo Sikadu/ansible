@@ -38,5 +38,5 @@
         DURATION: "120HRS"
         TRAINER: "Sivakumar Reddy M"
   ansible.builtin.debug:
-    msg: "Hi, i'm learning {{COURSE}}"   
+  msg: "Hi, i'm learning {{COURSE}}"   
 
