@@ -1,20 +1,40 @@
+# - name: variables to print
+#   hosts: web
+#   vars:
+#     COURSE: "DevOps with AWS from PLAY level"
+#     DURATION: "120HRS"
+#     TRAINER: "Sivakumar Reddy M"
+#   vars_files:
+#   - vars.yaml
+#   vars_prompt:
+#   - name: COURSE
+#     prompt: Please enter the course name
+#     private: false # not confidential
+#   tasks:
+#   - name: print the information
+#     vars:
+#       #COURSE: "DevOps with AWS from TASK level"
+#       DURATION: "120HRS"
+#       TRAINER: "Sivakumar Reddy M"
+#     ansible.builtin.debug:
+#       msg: "Hi, I am learning {{COURSE}}"
+
+
 - name: variables to print
   hosts: web
   vars:
-    COURSE: "DevOps with AWS from PLAY level"
+    COURSE: "DevOps with AWS"
     DURATION: "120HRS"
-    TRAINER: "Sivakumar Reddy M"
+    TRAINER: "Sivakumar"
   vars_files:
-  - vars.yaml
+  - vars.yaml  
   vars_prompt:
-  - name: COURSE
-    prompt: Please enter the course name
-    private: false # not confidential
+  - name: course
+    prompt: please enter the course name
   tasks:
-  - name: print the information
+  - name: please enter the course info
     vars:
-      #COURSE: "DevOps with AWS from TASK level"
-      DURATION: "120HRS"
-      TRAINER: "Sivakumar Reddy M"
-    ansible.builtin.debug:
-      msg: "Hi, I am learning {{COURSE}}"
+     COURSE: ansible
+  ansible.builtin.debug:
+    msg: "Hi, i'm learning {{COURSE}}"   
+
