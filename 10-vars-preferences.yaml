@@ -31,6 +31,7 @@
   vars_prompt:
   - name: COURSE
     prompt: please enter the course name
+    private: false
   tasks:
   - name: please enter the course info
     vars:
