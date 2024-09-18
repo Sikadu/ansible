@@ -35,6 +35,8 @@
   - name: please enter the course info
     vars:
     #  COURSE: "ansible"
+        DURATION: "120HRS"
+        TRAINER: "Sivakumar Reddy M"
   ansible.builtin.debug:
     msg: "Hi, i'm learning {{COURSE}}"   
 
