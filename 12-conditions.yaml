@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars_prompt:
-  - name: my_number
+  - name: my_number # number is reserved work, thats the reason we used another string my_number
     prompt: please enter the number
     private: false
   tasks:
