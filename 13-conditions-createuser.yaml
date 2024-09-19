@@ -1,0 +1,9 @@
+---
+- name: Create user
+  hosts: web
+  become: yes
+  tasks: 
+    - name: check expsense is exists or not
+      ansible.builtin.command: id expsense
+      register: USER
+      ignore_errors: true
