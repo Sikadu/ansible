@@ -5,8 +5,9 @@
   tasks:
     - name: install given packages using loop
       ansible.builtin.debug:
-      msg: "packages are {{ item }}"
-      state: present
+       msg: "packages are {{ item }}"
+       state: present
+       
       loop:
       - httpd
       - postfix
