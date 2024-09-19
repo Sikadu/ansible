@@ -6,7 +6,7 @@
     - name: check expsense is exists or not
       ansible.builtin.command: id expsense
       register: USER
-      ignore_errors: true
+      ignore_errors: True
 
     - name: check expsense is exists or not
       ansible.builtin.debug:
