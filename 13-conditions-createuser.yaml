@@ -7,3 +7,12 @@
       ansible.builtin.command: id expsense
       register: USER
       ignore_errors: true
+
+    - name: check expsense is exists or not
+      ansible.builtin.debug:
+       msg: "user info {{ USER }}"
+
+    - name: create expsense user
+      ansible.builtin.command: useradd expsense
+      when: USER.rc ! = 0
+
