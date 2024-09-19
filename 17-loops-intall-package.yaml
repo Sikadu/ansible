@@ -4,10 +4,10 @@
   become: yes
   tasks:
     - name: install given packages using loop
-      ansible.builtin.debug:
+      ansible.builtin.package:
        msg: "packages are {{ item }}"
        state: present
-       
+
       loop:
       - httpd
       - postfix
