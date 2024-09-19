@@ -3,14 +3,14 @@
   hosts: web
   become: yes
   tasks:
-    - name: install and remove packages as per the loop
-      ansible.builtin.package:
+   - name: install and remove packages as per the loop
+     ansible.builtin.package:
        name: "{{ item.name }}"
        state: "{{ item.state }}"
        
-       loop:
-       - { name: 'mysql' , state: 'absent' }
-       - { name: 'httpd' , state: 'absent' }
-       - { name: 'nginx' , state: 'absent' }
-       - { name: 'postfix' , state: 'absent' }
-       - { name: 'nginx' , state: 'absent' }
+     loop:
+      - { name: 'mysql', state: 'absent' }
+      - { name: 'httpd', state: 'absent' }
+      - { name: 'nginx', state: 'absent' }
+      - { name: 'postfix', state: 'absent' }
+      - { name: 'nginx', state: 'present' }
