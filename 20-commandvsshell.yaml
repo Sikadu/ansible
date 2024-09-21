@@ -1,16 +1,16 @@
 ---
 - name: command vs shell
-  hosts: web
-  become: yes
+  hosts: local
+  connection:: local
   tasks:
-    - name: execute this using shell
-      ansible.builtin.shell: ls -ltr > /tmp/output.txt
+  - name: execute this using shell
+    ansible.builtin.shell: ls -ltr > /tmp/output.txt
 
 
-    - name: check the process using shell
-      ansible.builtin.shell: ps -ef | grep ssh
-      register: output
+  - name: check the process using shell
+    ansible.builtin.shell: ps -ef | grep ssh
+    register: output
 
-    - name: check the process using command
-      ansible.builtin.command: ps -ef | grep ssh  
-      register: output
+  - name: check the process using command
+    ansible.builtin.command: ps -ef | grep ssh  
+    register: output
