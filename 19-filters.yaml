@@ -1,0 +1,34 @@
+---
+- name: variable wihout mentioning anywhere and calling with default
+  hosts: local
+  connection: local
+  tasks:
+  - name: default variable
+    ansible.builtin.debug:
+      msg: "Hello {{ Course | default ('ANSIBLE') }}"
+
+  - name: convert to uppercase
+    vars:
+      greeting: hello sindhu
+    ansible.builtin.debug:
+      msg: "{{ greeting | upper }}"   
+
+  - name: convert to lowercase
+    vars:
+      greeting: HELLO SINDHU
+    ansible.builtin.debug:
+      msg: "{{ greeting | lower }}"  
+
+
+  - name: convert to lowercase
+    vars:
+      numbers: [1,2,8,13,8,45,6,3,3,55,88]
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}" 
+
+  - name: get minimum and maximum numbers
+    vars:
+      numbers: [1,2,8,13,8,45,6,3,3,55,88]
+    ansible.builtin.debug:
+      msg: "min: {{ numbers | min }}, max: {{ numbers | max}}"
+    
