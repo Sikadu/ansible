@@ -14,16 +14,16 @@
   tasks:
     - name: install dependencies
       ansible.builtin.pip:
-       name:
-       - boto3
-       - botocore
-       executable: pip3.9
+        name:
+        - boto3
+        - botocore
+        executable: pip3.9
 
     - name: create ec2 instance
       amazon.aws.ec2_instance: 
         name: "{{ item }}"
         vpc_subnet_id: "{{ subnet_id }}"
-        instance_type: t3.micro
+        instance_type: "t3.micro"
         security_group: "{{ sg_id }}"
         image_id: "{{ ami_id }}"
       loop: "{{ instances }}"
